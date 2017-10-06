@@ -1,6 +1,6 @@
 $(function() {
-	
-	//solve the active menu problem
+
+	// solve the active menu problem
 	switch (menu) {
 	case "About Us":
 		$('#about').addClass("active");
@@ -8,10 +8,12 @@ $(function() {
 	case "Contact us":
 		$('#contact').addClass("active");
 		break;
-	case "home":
-		$('#home').addClass("active");
+	case "All Products":
+		$("#listProducts").addClass("active");
 		break;
 	default:
+		$("#listProducts").addClass("active");
+		$('#a_' + menu).addClass("active");
 		break;
 	}
 })

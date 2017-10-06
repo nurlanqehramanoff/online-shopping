@@ -23,6 +23,7 @@
 
 <script type="text/javascript">
 	window.menu = "${title}";
+	
 </script>
 
 <!-- Bootstrap Core CSS -->
@@ -62,6 +63,12 @@
 			<c:if test="${UserClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			
+			<!-- Load only when user clicks contact -->
+			<c:if test="${UserClickAllProducts == true  or UserClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
 		</div>
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
